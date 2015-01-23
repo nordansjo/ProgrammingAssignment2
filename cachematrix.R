@@ -1,12 +1,12 @@
-##Theese two functions creates can be used together to to calculate the invert of a matrix. if the calculation have been made
-## earlier it uses that value and because of that dosn´t have to do the calculation again and therefore saves time.
+##These two functions can be used together to calculate the invert of a matrix. If the calculation have been made
+## earlier it uses that value instead of running the calculation again and therefore could saves resources.
 
 
 
 
-## MakeCacheMatrix creates a function that that makes a kind of matrix with 4 functions included. 
+## makeCacheMatrix creates a function that that makes a matrix-ish with 4 functions included. 
 ## Set that sets the value of the matrix and removes the old free variable. get that grab the value of the matrix.
-## setinv that sets the inverted matrix with the solve function. getinv that grabs the inverted matrix.
+## setinv takes a value from cacheSolves and sets the inverted matrix that have been calculated with the solve function. getinv that grabs the inverted matrix.
  
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -26,8 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## cache solves uses the kind of matrix created in makeChaceMatrix and applies the solve function. if the invert already 
-## have been calculated it uses the value from the free variabel inv and print a message that it uses a cached value.
+## cacheSolves uses the matrix function created in makeChaceMatrix and applies the solve function to the value. If the invert already 
+## have been calculated it doesn´t make the calculation again, instead it uses the value from the free variabel inv and print a message that it uses a cached value.
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
